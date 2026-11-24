@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7/"
+     xml:base="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#boolean -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#int -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#int">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#belongTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#belongTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#isEvergreen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#isEvergreen">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#lifespan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#lifespan">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#protectionLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#protectionLevel">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Angiosperm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Angiosperm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#SeedPlant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#EvergreenPlant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#EvergreenPlant">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#isEvergreen"/>
+                <owl:hasValue>yes</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Ginkgo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Ginkgo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Gymnosperm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Gymnosperm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Gymnosperm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#SeedPlant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Plant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Plant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Rosa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Rosa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Angiosperm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#SeedPlant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#SeedPlant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Ginkgo_Instance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Ginkgo_Instance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Ginkgo"/>
+        <untitled-ontology-7:isEvergreen>yes</untitled-ontology-7:isEvergreen>
+        <untitled-ontology-7:lifespan>1000</untitled-ontology-7:lifespan>
+        <untitled-ontology-7:protectionLevel>National class1</untitled-ontology-7:protectionLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Rosa_Instance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Rosa_Instance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/j/ontologies/2026/10/untitled-ontology-7#Rosa"/>
+        <untitled-ontology-7:isEvergreen>no</untitled-ontology-7:isEvergreen>
+        <untitled-ontology-7:lifespan>10</untitled-ontology-7:lifespan>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
